@@ -1,0 +1,247 @@
+
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header p {
+    margin: 0;
+}
+
+header img {
+    max-width: 80%; /* 調整 Logo 大小 */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+nav {
+    background-color: #333;
+    padding: 0.5rem 0;
+}
+
+nav ul.mmain-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul.mmain-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul.mmain-nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul.mmain-nav li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+.pg {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.ue {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* 防止圖片溢出 */
+}
+
+.c2 {
+    color: #e44d26; /* 主題色 */
+    border-bottom: 2px solid #e44d26;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.cak1, .cak2 {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: block; /* 確保圖片獨佔一行 */
+}
+
+.ue p {
+    line-height: 1.8;
+}
+
+/* RWD 調整 (簡單範例) */
+@media (max-width: 768px) {
+    nav ul.mmain-nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul.mmain-nav {
+        text-align: left;
+    }
+
+    .cak1, .cak2 {
+        width: 100%;
+    }
+}
+
+/* 角色表格樣式 (修改後) */
+#character-details {
+    width: 10224px; /* 設定與 .pg 相同的最大寬度 */
+    max-width: 1024px; /* 確保在寬度小於 960px 的螢幕上也能正常顯示 */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* 將左右 margin 設定為 auto，實現水平置中 */
+}
+
+#character-details h2 {
+    color: #e44d26; /* 與簡介標題相同的顏色 */
+    border-bottom: 2px solid #e44d26;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center; /* 將標題文字置中 (可選) */
+}
+
+.wikitable {
+    width: 100%; /* 讓表格寬度撐滿 #character-details 區塊 */
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9em;
+    border: 1px solid #ddd;
+}
+
+.wikitable th,
+.wikitable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.wikitable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.wikitable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.wikitable tr:hover {
+    background-color: #e0e0e0;
+}
+
+.wikiTableImgBorder img {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block; /* 讓圖片在表格單元格中居中 */
+    margin: 0 auto;
+    max-width: 100%; /* 確保圖片不會超出表格單元格 */
+    height: auto;
+}
+
+.unsortable {
+    /* 如果你希望某些欄位不要有排序箭頭（如果之後加入排序功能），可以加上這個 class */
+}
+
+/* RWD 調整 (針對 #character-details) */
+@media (max-width: 960px) {
+    #character-details {
+        width: 95%; /* 在小於 960px 的螢幕上，寬度稍微縮小並保持置中 */
+        max-width: none; /* 移除最大寬度限制，讓寬度可以根據百分比調整 */
+    }
+}
+
+
+/* 下載項目樣式 */
+.download-item {
+    display: flex; /* 使用 Flexbox 佈局 */
+    flex-direction: column; /* 將 Logo 和文字垂直排列 */
+    align-items: center; /* 讓 Logo 和文字水平置中對齊 */
+}
+
+.download-item a {
+    text-decoration: none; /* 移除超連結的底線 */
+    color: #333; /* 設定超連結文字顏色 */
+    display: flex; /* 讓<a>標籤也使用 Flexbox 佈局，方便內部元素對齊 */
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-item img {
+    width: 100%;
+    height: auto;
+    max-width: 150px; /* 調整 Logo 的最大寬度，使其與文字更協調 */
+    margin-bottom: 5px; /* 在 Logo 和文字之間增加一些間距 */
+}
+
+.download-item span {
+    font-size: 0.9em; /* 設定文字大小 */
+}
+
+/* 更新 .download-logos 的 Grid 佈局，調整間距 */
+.download-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* 增加項目之間的間距 */
+    justify-items: center;
+}
+
+/* 如果你的瀏覽器不支援 :has 選擇器，你可以直接針對下載區域的 .ue 增加一個特定的 class，例如： */
+/* <div class ="ue download-area"> */
+/* 然後在 CSS 中使用： */
+/* .download-area { text-align: center; } */
+
+
+/* 頁尾樣式 (調整後) */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0; /* 增加上下內距 */
+    text-align: center; /* 讓圖片置中 */
+    font-size: 0.8em;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content img {
+    display: block; /* 讓圖片獨佔一行並可以設定 margin */
+    margin: 0 auto; /* 讓圖片水平置中 */
+    max-width: 100%; /* 確保圖片不會超出容器寬度 */
+    height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
